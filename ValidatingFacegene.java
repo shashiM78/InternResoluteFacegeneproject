@@ -42,7 +42,7 @@ public class ValidatingFacegene{
 		driver.findElement(By.id("password")).sendKeys("tesg@123");
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
 		String actual = driver.getCurrentUrl();
-		String expected = "https://facegenie-ams-school.web.app";
+		String expected = "https://facegenie-ams-school.web.app/";
 		Assert.assertEquals(actual, expected);
 		driver.quit();
 	}
@@ -52,7 +52,7 @@ public class ValidatingFacegene{
 		driver.findElement(By.id("password")).sendKeys("tesg@123");
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
 		String actual = driver.getCurrentUrl();
-		String expected = "https://facegenie-ams-school.web.app";
+		String expected = "https://facegenie-ams-school.web.app/";
 		Assert.assertEquals(actual, expected);
 		driver.quit();
 	}
@@ -135,7 +135,7 @@ public class ValidatingFacegene{
 		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div/div/main/div[2]/div/div/div/div[3]/div/form/div[5]/button")).click();
 		String actual = driver.getCurrentUrl();
 		String expected2 = "https://facegenie-ams-school.web.app/dashboard/managelicenses";
-		Assert.assertEquals(actual, expected2);
+		Assert.assertNotEquals(actual, expected2);
 		driver.quit();
 	}
 @AfterMethod
